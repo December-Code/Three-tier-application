@@ -16,6 +16,45 @@
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
 
+  <style>
+    /* #6c757d; */
+    .btn-outline-secondary {
+      color: #6c757d;
+      border-color: #6c757d;
+    }
+
+    .btn-outline-secondary:hover {
+      color: #FFD401;
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
+
+    .btn-outline-secondary.focus,
+    .btn-outline-secondary:focus {
+      box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+    }
+
+    .btn-outline-secondary.disabled,
+    .btn-outline-secondary:disabled {
+      color: #6c757d;
+      background-color: transparent;
+    }
+
+    .btn-outline-secondary:not(:disabled):not(.disabled).active,
+    .btn-outline-secondary:not(:disabled):not(.disabled):active,
+    .show>.btn-outline-secondary.dropdown-toggle {
+      color: #FFD401;
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
+
+    .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+    .show>.btn-outline-secondary.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+    }
+  </style>
+
 </head>
 
 <body>
@@ -34,16 +73,16 @@
             <a class="nav-link" href="#">首頁</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">關於</a>
+            <a class="nav-link" href="#">我的商品</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">語音服務</a>
+            <a class="nav-link" href="#">會員資訊</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">客服服務</a>
+            <a class="nav-link" href="#">購物車</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">登入</a>
+            <a class="nav-link" href="#">登入/註冊</a>
           </li>
         </ul>
       </div>
@@ -59,7 +98,7 @@
 
         <h1 class="my-4">Shop Name</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
+          <a href="#" class="list-group-item ">Category 1</a>
           <a href="#" class="list-group-item">Category 2</a>
           <a href="#" class="list-group-item">Category 3</a>
           <a href="#" class="list-group-item">Category 4</a>
@@ -102,7 +141,16 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-<!-- 輪播空間 -->
+        <!-- Search -->
+        <div class="input-group mb-3" style="width:50%;">
+          <input type="text" class="form-control" placeholder="search for....?" aria-label="search for...."
+            aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">search</button>
+          </div>
+        </div>
+        <!-- Search -->
+        <!-- 輪播空間 -->
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -201,7 +249,7 @@
                 </p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
               </div>
             </div>
           </div>
@@ -221,7 +269,9 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">LongMeter Thank you &copy;</p>
+      <p class="m-0 text-center text-white">客服服務:090999999 </p>
+      <p class="m-0 text-center text-white">聯絡信箱:090999999 </p>
+      <p class="m-0 text-center text-white">LongMeter Thank you </p>
     </div>
     <!-- /.container -->
   </footer>
@@ -231,4 +281,5 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
