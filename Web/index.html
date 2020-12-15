@@ -22,8 +22,14 @@
       color: #9A9DA0;
     }
 
+    /* .menu {
+      font-size: 25px;
+      font-weight: 350;
+    } */
+
     .brand {
       font-size: 25px;
+      font-weight: 700;
     }
   </style>
 
@@ -34,12 +40,19 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand brand" href="#">LongMeter</a>
+      <a class="navbar-brand brand" href="#">
+        <img src="materials\logo\logo(new).png" alt="LongMeter"> LongMeter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!-- Search_menu -->
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <!-- Search_menu ↑-->
         <ul class="navbar-nav ml-auto">
           <li>
             <a class="nav-link" href="#">首頁</a>
@@ -95,7 +108,12 @@
                       </label>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Sign in</button>
+                  <button type="submit" class="btn btn-secondary">Sign in</button>
+                  <!-- 讀取預留 -->
+                  <!-- <button class="btn btn-secondary" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button> -->
                 </form>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">New around here? Sign up</a>
@@ -109,7 +127,7 @@
     </div>
   </nav>
 
-  <!-- 超大廣告常駐 狂賺!!!賺!!! -->
+  <!-- 超大廣告隨機 狂賺!!!賺!!! -->
   <!-- <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Fluid jumbotron</h1>
@@ -299,6 +317,27 @@
         </div>
         <!-- /.row -->
 
+        <!-- 下頁按鈕 -->
+        <div>
+          <nav aria-label="Change Page">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- 下頁按鈕 ↑-->
       </div>
       <!-- /.col-lg-9 -->
 
