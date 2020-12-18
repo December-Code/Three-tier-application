@@ -71,3 +71,20 @@ body {
   background-color: #6c757d;
   border-color: #6c757d;
 }
+
+.btn-menu {
+  border-radius: 0rem;
+  background-color: #343a40;
+  color: #9a9da0;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.kindScroll {
+  width: 200px;
+  height: 300px;
+  overflow-y: scroll;
+}
