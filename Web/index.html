@@ -22,14 +22,15 @@
       color: #9A9DA0;
     }
 
-    /* .menu {
-      font-size: 25px;
-      font-weight: 350;
-    } */
-
     .brand {
       font-size: 25px;
       font-weight: 700;
+    }
+
+    .kindScroll {
+      width: 200px;
+      height: 300px;
+      overflow-y: scroll;
     }
   </style>
 
@@ -47,15 +48,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <!-- Search_menu -->
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <!-- Search_menu ↑-->
         <ul class="navbar-nav ml-auto">
           <li>
-            <a class="nav-link" href="#">首頁</a>
+            <a class="nav-link" href="index.html">首頁</a>
           </li>
           <!-- <li>
             <button type="button" class="btn btn-primary">
@@ -63,13 +58,20 @@
             </button>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#">我的商品</a>
+            <div class="dropdown">
+              <a class="btn btn-secondary btn-menu" href="MyProducts.html" role="button" id="dropdownMenuMyProducts"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">我的商品
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">商品 0</a>
+              </div>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">工作刊登</a>
+            <a class="nav-link" href="findWork.html">工作刊登</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">會員資訊</a>
+            <a class="nav-link" href="Membership.html">會員資訊</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
@@ -116,8 +118,8 @@
                   </button> -->
                 </form>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">New around here? Sign up</a>
-                <a class="dropdown-item" href="#">Forgot password?</a>
+                <a class="dropdown-item" href="signUp.html">New around here? Sign up</a>
+                <!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
               </div>
             </div>
           </li>
@@ -142,12 +144,17 @@
       <div class="col-lg-3">
 
         <h4 class="my-4">商品種類</h4>
-        <div class="list-group">
+        <div class="list-group kindScroll">
           <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Category 1</a>
           <a href="#" class="list-group-item list-group-item-action">Category 2</a>
           <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Category 3</a>
           <a href="#" class="list-group-item list-group-item-action">Category 4</a>
           <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Category 5</a>
+          <a href="#" class="list-group-item list-group-item-action ">Category 5</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Category 5</a>
+          <a href="#" class="list-group-item list-group-item-action ">Category 5</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Category 5</a>
+          <a href="#" class="list-group-item list-group-item-action ">Category 5</a>
         </div>
 
       </div>
@@ -213,7 +220,7 @@
         <!-- 商品空間 -->
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
+            <div class="card h-">
               <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
@@ -298,8 +305,9 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
+            <div class="card h-100 border-warning" style="border-width: 3px">
               <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Item Six</a>
@@ -307,9 +315,19 @@
                 <h5>NT24.99</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
                 </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+                <div>
+                  <div style="display: inline-block;">
+                    <p>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                    <button>加入購物車</button>
+                  </div>
+                  <div style="display: inline-block;">
+                    <p>已售出:255</p>
+                    <button>直接購買</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -348,7 +366,7 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer class="py-4 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">客服服務:090999999 </p>
       <p class="m-0 text-center text-white">聯絡信箱:090999999 </p>
