@@ -7,9 +7,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>LongMeter</title>
 
+    
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
     <!-- Bootstrap core JavaScript -->
-    <script src="Content/vendor/jquery/jquery.min.js"></script>
-    <script src="Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <style>
         .btn-menu {
