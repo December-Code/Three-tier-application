@@ -9,14 +9,14 @@
 
     
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
   <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
+  <link href="Content/css/shop-homepage.css" rel="stylesheet"/>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Content/vendor/jquery/jquery.min.js"></script>
+    <script src="Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <style>
         .btn-menu {
