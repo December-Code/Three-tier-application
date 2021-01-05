@@ -1,4 +1,7 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="findwork.aspx.cs" Inherits="LongMeter.WebForm2" %>
+
 <!DOCTYPE html>
+
 <html lang="zh-Hant-TW">
 
 <head>
@@ -14,7 +17,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -28,11 +30,11 @@
         <div class="row g-3">
             <div class="col-md-7 col-lg-8 mx-auto">
                 <h4 class="mb-3">工作資料</h4>
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" runat="server">
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <asp:TextBox class="form-control" ID="firstName" runat="server"></asp:TextBox>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -40,24 +42,24 @@
 
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            <asp:TextBox class="form-control" ID="lastName" runat="server"></asp:TextBox>
                             <div class="invalid-feedback">
                                 Valid last name is required.
                             </div>
                         </div>
 
                         <div class="p-3">
-                            <select class="btn-outline-dark">
-                                　<option value="">請選擇性別</option>
-                                　<option value="M">男</option>
-                                　<option value="G">女</option>
-                            </select>
+                            <asp:DropDownList class="btn-outline-dark" ID="Gender" runat="server">
+                                <asp:ListItem>請選擇性別</asp:ListItem>
+                                <asp:ListItem>男</asp:ListItem>
+                                <asp:ListItem>女</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
 
                         <div class="col-12">
                             <label for="Account" class="form-label">Account</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="Account" placeholder="Account" required>
+                                <asp:TextBox class="form-control" ID="Account" runat="server"></asp:TextBox>
                                 <div class="invalid-feedback">
                                     Your Account is required.
                                 </div>
@@ -67,7 +69,7 @@
                         <div class="col-12 py-2">
                             <label for="password" class="form-label">password</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="password" placeholder="password" required>
+                                <asp:TextBox class="form-control" ID="password" runat="server" TextMode="Password"></asp:TextBox>
                                 <div class="invalid-feedback">
                                     Your password is required.
                                 </div>
@@ -76,7 +78,7 @@
 
                         <div class="col-12 py-2">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            <asp:TextBox class="form-control" ID="email" runat="server" TextMode="email" placeholder="you@example.com"></asp:TextBox>
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
                             </div>
@@ -84,40 +86,39 @@
 
                         <div class="col-12 py-2">
                             <label for="Phone" class="form-label">Phone<span class="text-muted">(簡訊通知)</span></label>
-                            <input type="Phone" class="form-control" id="Phone">
+                            <asp:TextBox class="form-control" ID="Phone" runat="server" TextMode="Phone"></asp:TextBox>
                         </div>
 
                         <div class="col-12 py-2">
                             <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="桃園市中壢區....." required>
+                            <asp:TextBox class="form-control" ID="address" runat="server" placeholder="桃園市中壢區....."></asp:TextBox>
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
                         </div>
-
                         <div class="p-3">
-                            <select class="btn-outline-dark">
-                                <option value="">工作種類</option>
-                                　<option value="truck">大卡車司機</option>
-                                　<option value="Excavator">怪手師傅</option>
-                                　<option value="Stacker">堆高機師傅</option>
-                            </select>
+                            <asp:DropDownList class="btn-outline-dark" ID="workind" runat="server">
+                                <asp:ListItem>工作種類</asp:ListItem>
+                                <asp:ListItem>大卡車司機</asp:ListItem>
+                                <asp:ListItem>堆高機師傅</asp:ListItem>
+                                <asp:ListItem>怪手師傅</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
 
                         <div class="col-12 py-2">
                             <label for="Salary" class="form-label">Salary</label>
-                            <input type="text" class="form-control" id="Salary" placeholder="每小時多少?" required>
+                            <asp:TextBox class="form-control" ID="Salary" runat="server" placeholder="每小時多少?" TextMode="Number"></asp:TextBox>
                             <div class="invalid-feedback">
                                 Please enter your Salary.
                             </div>
                         </div>
 
                         <div class="p-3">
-                            <select class="btn-outline-dark">
-                                　<option value="">付款方式</option>
-                                　<option value="cash">領現金</option>
-                                　<option value="transfer">匯款</option>
-                            </select>
+                            <asp:DropDownList class="btn-outline-dark" ID="cash" runat="server">
+                                <asp:ListItem>付款方式</asp:ListItem>
+                                <asp:ListItem>領現金</asp:ListItem>
+                                <asp:ListItem>匯款</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                     </div>
 
@@ -125,10 +126,10 @@
 
                     <hr class="my-4">
                     <div class="form-check py-2">
-                        <input type="checkbox" class="form-check-input bo" id="save-info">
+                        <asp:CheckBox class="form-check-input bo" ID="saveinfo" runat="server" />
                         <label class="form-check-label" for="save-info">我已閱讀隱私權授權書</label>
                     </div>
-                    <button class="w-100 btn btn-primary btn-lg" type="submit">申請刊登</button>
+                    <asp:Button class="w-100 btn btn-primary btn-lg" ID="Apply" runat="server" Text="申請刊登" OnClick="Apply_Click" />
                 </form>
             </div>
         </div>
@@ -149,5 +150,4 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

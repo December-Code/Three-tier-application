@@ -1,39 +1,19 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="LongMeter.WebForm1" %>
+
 <!DOCTYPE html>
+
 <html lang="zh-Hant-TW">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%--<meta name="description" content="">
+    <meta name="author" content="">--%>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>LongMeter</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
-
-  <style>
-    .btn-menu {
-      border-radius: 0rem;
-      background-color: #343A40;
-      color: #9A9DA0;
-    }
-
-    .brand {
-      font-size: 25px;
-      font-weight: 700;
-    }
-
-    .kindScroll {
-      width: 200px;
-      height: 300px;
-      overflow-y: scroll;
-    }
-  </style>
-
+    <title>LongMeter</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,35 +31,19 @@
         <ul class="navbar-nav ml-auto">
           <li>
             <a class="nav-link" href="index.html">首頁</a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="btn btn-secondary btn-menu" style="padding-right:0;" role="button" id="dropdownMenuMyProducts"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">我的商品<a href="MyProducts.html"><img
-                    src="materials\icons\shopitem_y.png" alt="item"></a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">商品 0</a>
-                </div>
-              </a>
-            </div>
-          </li>
+          </li><li>
+            <a class="nav-link" href="index.html">我的商品</a>
+          </li>          
           <li class="nav-item">
             <a class="nav-link" href="findWork.html">工作刊登</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Membership.html">會員資訊</a>
           </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a class="btn btn-secondary btn-menu" href="#" role="button" id="dropdownMenuCart" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">購物車
-              </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">商品 1</a>
-                <a class="dropdown-item" href="#">商品 2</a>
-              </div>
-            </div>
+            <li class="nav-item">
+            <a class="nav-link" href="Membership.html">購物車</a>
           </li>
+          
           <!-- Login -->
           <li class="nav-item">
             <div class="dropdown">
@@ -87,35 +51,24 @@
                 aria-haspopup="true" aria-expanded="false">登入I註冊
               </a>
               <div class="dropdown-menu">
-                <form class="px-4 py-3">
+
+                  <%--connect sql--%>
+                <form class="px-4 py-3" method="post" action="check.php">
                   <div class="form-group">
-                    <label for="exampleDropdownFormEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleDropdownFormEmail1"
-                      placeholder="email@example.com">
+                    <label for="Account">Account</label>
+                    <input type="text" class="form-control" id="Account"
+                      placeholder="Account">
                   </div>
                   <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password"
                       placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                      <label class="form-check-label" for="dropdownCheck">
-                        Remember me
-                      </label>
-                    </div>
-                  </div>
+                  </div>                  
                   <button type="submit" class="btn btn-secondary">Sign in</button>
-                  <!-- 讀取預留 -->
-                  <!-- <button class="btn btn-secondary" type="button" disabled>
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    Loading...
-                  </button> -->
                 </form>
+
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="signUp.html">New around here? Sign up</a>
-                <!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
               </div>
             </div>
           </li>
@@ -401,5 +354,4 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

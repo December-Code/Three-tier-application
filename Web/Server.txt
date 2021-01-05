@@ -1,0 +1,1 @@
+Data Source=140.118.5.90,14433;Initial Catalog=LongMeter_Data;Persist Security Info=True;User ID=SQL_Admin
