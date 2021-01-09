@@ -22,7 +22,7 @@ namespace LongMeter
             else
             {
                 Response.Write("<script>window.alert(\"請先登入\");</script>");
-                //Response.Write("<script> window.location.href ='Home.aspx';</script>");
+                Response.Write("<script> window.location.href ='Home.aspx';</script>");
             }
         }
     }
