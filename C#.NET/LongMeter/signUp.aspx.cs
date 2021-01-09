@@ -27,13 +27,14 @@ namespace LongMeter
 
 
             string query = "SELECT TOP (1) * FROM [LongMeter_DataPlus].[dbo].[Machines] ORDER BY Machine_id DESC";
+
             SqlDataAdapter sqlData = new SqlDataAdapter(query, con);
             DataTable Data = new DataTable();
             sqlData.Fill(Data);
 
             int Member_id = int.Parse(Data.Rows[0][0].ToString()) + 1;
 
-            query = $"INSERT INTO [LongMeter_DataPlus].[dbo].[Membership] ([Member_id], [first_name], [last_name], [email], [Phone], [Adress], [Account], [Password]) VALUES ({Member_id}, '{firstName.Text}', '{lastName.Text}', '{email.Text}', {int.Parse(Phone.Text)}, '{address.Text}', '{Account.Text}', '{password.Text}')";
+            query = $"INSERT INTO [LongMeter_DataPlus].[dbo].[Membership] ([Member_id], [first_name], [last_name], [email], [Phone], [Address], [Account], [Password]) VALUES ({Member_id}, '{firstName.Text}', '{lastName.Text}', '{email.Text}', {int.Parse(Phone.Text)}, '{address.Text}', '{Account.Text}', '{password.Text}')";
 
 
             SqlCommand com = new SqlCommand(query, con);

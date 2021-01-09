@@ -123,10 +123,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Home.aspx" />
     <Content Include="findwork.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Home_fail.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="materials\icons\iconfinder_Construction_construction_machine_excavator_6588841.png" />
     <Content Include="materials\icons\iconfinder_Construction_construction_machine_forklift_lift_vehicle_6588824.png" />
     <Content Include="materials\icons\iconfinder_Construction_measure_meter_tape_tool_6588904.png" />
@@ -139,7 +138,21 @@
     <Content Include="materials\logo\logo%28new%29.png" />
     <Content Include="materials\logo\logo%28signup%29.png" />
     <Content Include="materials\logo\logo.png" />
+    <Content Include="materials\photo\700\3947.png_860.png" />
+    <Content Include="materials\photo\700\裁切_210108.jpg" />
+    <Content Include="materials\photo\700\裁切_210108_0.jpg" />
+    <Content Include="materials\photo\700\裁切_210108_1.jpg" />
+    <Content Include="materials\photo\700\裁切_210108_2.jpg" />
+    <Content Include="materials\photo\700\裁切_210108_3.jpg" />
+    <Content Include="materials\photo\700\裁切_210108_4.jpg" />
+    <Content Include="materials\photo\900\裁切_210108.jpg" />
+    <Content Include="materials\photo\900\裁切_210108_1.jpg" />
+    <Content Include="materials\photo\900\裁切_210108_2.jpg" />
+    <Content Include="materials\photo\900\裁切_210108_4.jpg" />
     <Content Include="materials\photo\m\cover_001.png" />
+    <Content Include="MyInformation.aspx" />
+    <Content Include="MyProducts.aspx" />
+    <Content Include="payment.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -182,6 +195,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LMGlobalClass.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -193,12 +213,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Home_fail.aspx.cs">
-      <DependentUpon>Home_fail.aspx</DependentUpon>
+    <Compile Include="MyInformation.aspx.cs">
+      <DependentUpon>MyInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home_fail.aspx.designer.cs">
-      <DependentUpon>Home_fail.aspx</DependentUpon>
+    <Compile Include="MyInformation.aspx.designer.cs">
+      <DependentUpon>MyInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProducts.aspx.cs">
+      <DependentUpon>MyProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProducts.aspx.designer.cs">
+      <DependentUpon>MyProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signUp.aspx.cs">
@@ -235,13 +269,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="findwork.aspx.cs">
       <DependentUpon>findwork.aspx</DependentUpon>
