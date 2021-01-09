@@ -86,7 +86,7 @@
                                         <asp:Button class="btn btn-secondary" ID="Sign" runat="server" Text="Sign in" OnClick="Login_Click" />
                                     </asp:Panel>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="signUp.html">New around here? Sign up</a>
+                                    <a class="dropdown-item" href="signUp.aspx">New around here? Sign up</a>
                                 </div>
                             </div>
                         </li>
