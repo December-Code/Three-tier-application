@@ -1,3 +1,5 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signUp.aspx.cs" Inherits="LongMeter.signUp" %>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 
@@ -19,8 +21,37 @@
     </style>
 
 </head>
-
 <body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand brand" href="#">
+                    <img src="materials\logo\logo(new).png" alt="LongMeter">
+                    LongMeter</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <a class="nav-link" href="Home.aspx">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="findwork.aspx">工作刊登</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MyProducts.aspx">我的交易</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MyInformation.aspx">修改資訊</a>
+                        </li>
+                        <!-- Login -->
+                        
+                        <!-- Login -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <div class="container">
         <main>
             <div class="py-5 text-center">
@@ -31,12 +62,12 @@
 
             <div class="g-3">
                 <div class="col-md-7 col-lg-8 mx-auto">
-                    <h4 class="mb-3">付款資訊</h4>
-                    <form class="needs-validation" novalidate>
+                    <h4 class="mb-3">會員資訊</h4>
+                    <form class="needs-validation" novalidate runat="server">
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <label for="firstName" class="form-label">First name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <asp:TextBox class="form-control" ID="firstName" runat="server" required="true"></asp:TextBox>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
                                 </div>
@@ -44,7 +75,7 @@
 
                             <div class="col-sm-6">
                                 <label for="lastName" class="form-label">Last name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <asp:TextBox class="form-control" ID="lastName" runat="server" required="true"></asp:TextBox>
                                 <div class="invalid-feedback">
                                     Valid last name is required.
                                 </div>
@@ -53,7 +84,7 @@
                             <div class="col-12 py-2">
                                 <label for="Account" class="form-label">Account</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="Account" placeholder="Account" required>
+                                    <asp:TextBox class="form-control" ID="Account" runat="server" placeholder="Account" required="true"></asp:TextBox>
                                     <div class="invalid-feedback">
                                         Your Account is required.
                                     </div>
@@ -63,8 +94,7 @@
                             <div class="col-12 py-2">
                                 <label for="Password" class="form-label">Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" id="password" placeholder="password"
-                                        required>
+                                    <asp:TextBox class="form-control" ID="password" runat="server" placeholder="password" TextMode="Password" required="true"></asp:TextBox>
                                     <div class="invalid-feedback">
                                         Your password is required.
                                     </div>
@@ -73,16 +103,14 @@
 
 
                             <div class="col-12 py-2">
-                                <label for="Phone" class="form-label">Phone<span
-                                        class="text-muted">(Optional)</span></label>
-                                <input type="text" class="form-control" id="Phone" placeholder="cellphone">
-
+                                <label for="Phone" class="form-label">
+                                    Phone<span class="text-muted">(Optional)</span></label>
+                                <asp:TextBox class="form-control" ID="Phone" runat="server" placeholder="cellphone" required="true"></asp:TextBox>
                             </div>
 
                             <div class="col-12 py-2">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com"
-                                    required>
+                                <asp:TextBox class="form-control" ID="email" runat="server" placeholder="you@example.com" required="true"></asp:TextBox>
                                 <div class="invalid-feedback">
                                     Please enter a valid email address for shipping updates.
                                 </div>
@@ -90,27 +118,27 @@
 
                             <div class="col-12 py-2">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
-                                    required>
+                                <asp:TextBox class="form-control" ID="address" runat="server" ></asp:TextBox>
                                 <div class="invalid-feedback">
                                     Please enter your shipping address.
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <hr class="my-4">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="privacy">
-                        <label class="form-check-label" for="same-address">我已閱讀隱私條款</label>
-                    </div>
+                        <hr class="my-4">
 
-                    <div class="form-check py-2">
-                        <input type="checkbox" class="form-check-input" id="same-address">
-                        <label class="form-check-label" for="same-address">用地址當作我預設寄送位置</label>
-                    </div>
-                    <div class="py-2">
-                        <button class="w-100 btn btn-primary btn-lg py" type="submit">申請</button>
-                    </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="privacy">
+                            <label class="form-check-label" for="same-address">我已閱讀隱私條款</label>
+                        </div>
+
+                        <div class="form-check py-2">
+                            <input type="checkbox" class="form-check-input" id="same-address">
+                            <label class="form-check-label" for="same-address">用地址當作我預設寄送位置</label>
+                        </div>
+                        <div class="py-2">
+                            <asp:Button class="w-100 btn btn-primary btn-lg py" ID="Apply" runat="server" Text="申請" OnClick="Apply_Click" />
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>
@@ -128,3 +156,4 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+</html>
